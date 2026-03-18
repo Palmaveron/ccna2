@@ -23,6 +23,6 @@ connections = [
 crt.Screen.Synchronous = True
 
 for connection in connections:
-	crt.Session.ConnectInTab(connection)
+crt.Session.ConnectInTab(connection)
 
 crt.Screen.Synchronous = False
