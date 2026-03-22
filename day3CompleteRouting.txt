@@ -479,5 +479,36 @@ Howt to configure Site 2 site VPN JP to PH:
 https://
 
 TASK6: FUndamentals of Cisco network Security:
+###
+2 rules of routing
+
+1. ping dikit only
+2. Route not dikit
 
 
+r4
+conf t
+ip route 10.1.1.4 255.255.255.252 10.1.1.9
+ip route 10.1.1.0 255.255.255.252 10.1.1.9
+
+r3 1.0
+conf t
+ip route 10.1.1.0 255.255.255.252 10.1.1.5
+
+
+
+r2 1.8
+conf t
+ip route 10.1.1.8 255.255.255.252 10.1.1.6
+
+
+r1: 1.4 and 1.8
+conf t
+ip route 10.1.1.4 255.255.255.252 10.1.1.2
+ip route 10.1.1.8 255.255.255.252 10.1.1.2
+
+
+OSPF-Iba ibang brand (Multi Vendor)
+EIGRP - Mayayamang company, Cisco brand
+BGP- Mamayamang company,/24 public IP, multiple telco
+Static Route- Mahirap na company
